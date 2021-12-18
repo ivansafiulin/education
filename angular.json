@@ -24,8 +24,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "docs",
-            "baseHref": "/education",
-            "deployUrl": "/education",
+            "baseHref": "/education/",
+            "deployUrl": "/education/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

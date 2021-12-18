@@ -1,0 +1,47 @@
+.main-page {
+  &__bnr {
+    &--img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.about-us {
+  color: #323232;
+
+  &__title {
+    font-size: 39px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 23px;
+
+    span {
+      font-size: 23px;
+      line-height: 26px;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  p:nth-last-child(1) {
+    margin: 0;
+  }
+}
+
+.container-wrapper {
+  .container-block {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 20px;
+    max-width: 1200px;
+  }
+}

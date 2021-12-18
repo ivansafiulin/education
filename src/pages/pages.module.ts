@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { HeaderModule } from './modules/header/header.module';
 import { FooterModule } from './modules/footer/footer.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { FooterModule } from './modules/footer/footer.module';
     PagesRoutingModule,
     HeaderModule,
     FooterModule,
-  ]
+    MatIconModule,
+    MatIconModule,
+  ],
 })
 export class PagesModule { }

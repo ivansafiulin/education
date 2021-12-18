@@ -1,4 +1,22 @@
 <div class="header">
-  <p>header works!</p>
+  <a routerLink="/" class="header__logo">
+    <img class="header__logo--img" src="./assets/images/panda.png" alt="panda">
+    <span class="header__logo-name">EEFK</span>
+  </a>
+  <nav class="header__nav">
+    <ul class="header__nav-ul">
+      <li class="header__nav-li">
+        <a routerLink="/" class="link-item" routerLinkActive="link-item--active">Головна</a>
+      </li>
+      <li class="header__nav-li">
+        <a class="link-item" routerLinkActive="link-item--active">Відео галерея</a>
+      </li>
+      <li class="header__nav-li">
+        <a class="link-item" routerLinkActive="link-item--active">Для детей та батьків</a>
+      </li>
+      <li class="header__nav-li">
+        <a class="link-item" routerLinkActive="link-item--active">Корисні посилання</a>
+      </li>
+    </ul>
+  </nav>
 </div>
-

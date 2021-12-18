@@ -76,6 +76,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "baseHref": "/",
+            "deployUrl": "/"
+          },
           "configurations": {
             "production": {
               "browserTarget": "education:build:production"

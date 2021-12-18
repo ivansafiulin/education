@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { environment } from '../environments/environment';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'education';
+  version = environment.version;
+
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+  ) {
+  }
+
+  ngOnInit() {
+    this.document.body.setAttribute('version', this.version);
+  }
 }

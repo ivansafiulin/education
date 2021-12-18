@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  videos: string[] = [
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+    'https://www.youtube.com/embed/1ozGKlOzEVc',
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

@@ -20,23 +20,16 @@
     <div class="container-block">
       <h4 class="about-us__title text-bold">Відео галерея</h4>
       <div class="videos-wrapper">
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/1ozGKlOzEVc" frameborder="0" allowfullscreen></iframe>
+        <div *ngFor="let video of videos; index as i; trackBy:identify" class="video">
+          <div *ngIf="video.isLoading" class="video-spinner">
+            <mat-spinner></mat-spinner>
+          </div>
+          <iframe
+            [src]="video.src | safe"
+            (load)="onLoadVideo(video)"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>

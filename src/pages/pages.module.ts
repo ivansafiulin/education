@@ -6,6 +6,8 @@ import { PagesComponent } from './pages.component';
 import { HeaderModule } from './modules/header/header.module';
 import { FooterModule } from './modules/footer/footer.module';
 import { MatIconModule } from '@angular/material/icon';
+import { MainPageModule } from './main-page/main-page.module';
+import { ScrollTopModule } from './modules/scroll-top/scroll-top.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     FooterModule,
     MatIconModule,
     MatIconModule,
+    MainPageModule,
+    ScrollTopModule,
   ],
 })
 export class PagesModule { }

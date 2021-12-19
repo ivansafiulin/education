@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IVideo } from '../models/interfaces/video.interface';
+import { videos } from '../../shared/data/video.data';
 
 @Component({
   selector: 'app-main-page',
@@ -7,18 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  videos: string[] = [
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-    'https://www.youtube.com/embed/1ozGKlOzEVc',
-  ]
+  videos: IVideo[] = JSON.parse(JSON.stringify(videos));
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  identify(index: number, item: IVideo) { return item.id; }
+
+  onLoadVideo(video: IVideo): void {
+    if (video) { video.isLoading = false; }
+  }
 }

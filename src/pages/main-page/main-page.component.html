@@ -4,7 +4,7 @@
   </div>
   <div class="about-us container-wrapper">
     <div class="container-block">
-      <h4 class="about-us__title text-bold">Про нас</h4>
+      <h4 class="title-text text-bold">Про нас</h4>
       <p class="about-us__text">
         <span class="text-bold">EEFK (Easy english for kids)</span>
         - це найкращий веб-сайт з підборкою відеоматеріалів для дітей, батьків та педагогів.
@@ -16,21 +16,19 @@
       </p>
     </div>
   </div>
-  <div class="videos container-wrapper">
+  <div class="video-presentation container-wrapper">
     <div class="container-block">
-      <h4 class="about-us__title text-bold">Відео галерея</h4>
-      <div class="videos-wrapper">
-        <div *ngFor="let video of videos; index as i; trackBy:identify" class="video">
-          <div *ngIf="video.isLoading" class="video-spinner">
-            <mat-spinner></mat-spinner>
-          </div>
-          <iframe
-            [src]="video.src | safe"
-            (load)="onLoadVideo(video)"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+      <h4 class="title-text text-bold">Вітальне відео</h4>
+      <div class="video">
+        <div *ngIf="video.isLoading" class="video-spinner">
+          <mat-spinner></mat-spinner>
         </div>
+        <iframe
+          [src]="video.src | safe"
+          (load)="onLoadVideo(video)"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>

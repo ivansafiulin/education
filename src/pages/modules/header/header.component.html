@@ -6,16 +6,32 @@
   <nav class="header__nav">
     <ul class="header__nav-ul">
       <li class="header__nav-li">
-        <a routerLink="/" class="link-item" routerLinkActive="link-item--active">Головна</a>
+        <a routerLink="/"
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="link-item"
+           routerLinkActive="link-item--active"
+        >
+          Головна
+        </a>
       </li>
       <li class="header__nav-li">
-        <a class="link-item" routerLinkActive="link-item--active">Відео галерея</a>
+        <a routerLink="/video-gallery"
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="link-item"
+           routerLinkActive="link-item--active"
+        >
+          Відео галерея
+        </a>
       </li>
       <li class="header__nav-li">
-        <a class="link-item" routerLinkActive="link-item--active">Для детей та батьків</a>
+        <a class="link-item" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="link-item--active">
+          Для детей та батьків
+        </a>
       </li>
       <li class="header__nav-li">
-        <a class="link-item" routerLinkActive="link-item--active">Корисні посилання</a>
+        <a class="link-item" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="link-item--active">
+          Корисні посилання
+        </a>
       </li>
     </ul>
   </nav>

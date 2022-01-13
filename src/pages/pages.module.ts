@@ -8,6 +8,7 @@ import { FooterModule } from './modules/footer/footer.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MainPageModule } from './main-page/main-page.module';
 import { ScrollTopModule } from './modules/scroll-top/scroll-top.module';
+import { VideoGalleryModule } from './video-gallery/video-gallery.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ScrollTopModule } from './modules/scroll-top/scroll-top.module';
     MatIconModule,
     MatIconModule,
     MainPageModule,
+    VideoGalleryModule,
     ScrollTopModule,
   ],
 })

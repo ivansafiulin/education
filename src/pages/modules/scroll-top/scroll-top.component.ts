@@ -1,38 +1,27 @@
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
-import { Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ScrollTopService } from './services/scroll-top.service';
 
 @Component({
   selector: 'app-scroll-top',
   templateUrl: './scroll-top.component.html',
   styleUrls: ['./scroll-top.component.scss']
 })
-export class ScrollTopComponent implements OnInit, AfterViewInit {
-
-  headerElement: HTMLElement | null = null;
+export class ScrollTopComponent implements OnInit {
   isVisibleScrollBtn: boolean = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(private scrollTopService: ScrollTopService) { }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(s: any) {
     const targetHtmlElement: HTMLElement = s.target.scrollingElement;
     this.isVisibleScrollBtn =
       targetHtmlElement.scrollHeight > targetHtmlElement.clientHeight
-      && targetHtmlElement.scrollTop > 0.3 * (targetHtmlElement.scrollHeight - targetHtmlElement.clientHeight);
+      && targetHtmlElement.scrollHeight > 100
   }
 
   ngOnInit(): void {}
 
-  private setHeaderElement(): void {
-    this.headerElement = (document.getElementById('header') as HTMLElement);
-  }
-
   scrollTop(): void {
-    if (this.headerElement) { this.headerElement.scrollIntoView({ behavior: 'smooth' }); }
-  }
-
-  ngAfterViewInit(): void {
-    this.setHeaderElement();
+    this.scrollTopService.scrollToTop();
   }
 }

@@ -9,8 +9,8 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      { path: '', component: MainPageComponent },
-      { path: 'video-gallery', component: VideoGalleryComponent }
+      { path: '', component: MainPageComponent, data: { animationState: 'main-page' } },
+      { path: 'video-gallery', component: VideoGalleryComponent, data: { animationState: 'video-gallery-page' } }
     ]
   }
 ];

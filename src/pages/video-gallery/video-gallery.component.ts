@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IVideo } from '../models/interfaces/video.interface';
 import { videos } from '../../shared/data/video.data';
+import { fadeInAnimation } from '../../animations/fade-in-animation.animation';
 
 @Component({
   selector: 'app-video-gallery',

@@ -9,14 +9,14 @@ import { ScrollTopService } from './services/scroll-top.service';
 export class ScrollTopComponent implements OnInit {
   isVisibleScrollBtn: boolean = false;
 
-  constructor(private scrollTopService: ScrollTopService) { }
+  constructor(
+    private scrollTopService: ScrollTopService
+  ) { }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(s: any) {
     const targetHtmlElement: HTMLElement = s.target.scrollingElement;
-    this.isVisibleScrollBtn =
-      targetHtmlElement.scrollHeight > targetHtmlElement.clientHeight
-      && targetHtmlElement.scrollHeight > 100
+    this.isVisibleScrollBtn = targetHtmlElement.scrollTop > 100;
   }
 
   ngOnInit(): void {}

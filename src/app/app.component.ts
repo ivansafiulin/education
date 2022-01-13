@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { environment } from '../environments/environment';
 import { DOCUMENT } from '@angular/common';
-import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { ScrollTopService } from '../pages/modules/scroll-top/services/scroll-top.service';
 import { filter } from 'rxjs/internal/operators/filter';
 
@@ -23,7 +23,7 @@ export class AppComponent {
   ngOnInit() {
     this.document.body.setAttribute('version', this.version);
 
-    this.router.events.pipe(filter(r => r instanceof NavigationStart)).subscribe(r=>{
+    this.router.events.pipe(filter(r => r instanceof NavigationEnd)).subscribe(r=>{
       this.scrollTopService.scrollToTop();
     });
   }

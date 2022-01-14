@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
@@ -12,7 +12,7 @@ import { fadeInAnimation } from '../animations/fade-in-animation.animation';
   styleUrls: ['./app.component.scss'],
   animations: [fadeInAnimation],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   version = environment.version;
 
   constructor(

@@ -1,0 +1,31 @@
+.title-text {
+  font-size: clamp(24px, 5vw, 39px);
+  line-height: 1.18;
+  text-align: center;
+}
+
+.links {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: clamp(10px, 4vw, 35px);
+
+  .link-element:not(:nth-last-of-type(1)) {
+    margin-bottom: 15px;
+  }
+
+  .link {
+    display: inline-block;
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: 1.18;
+    color: #000;
+    transition: color 0.15s, transform 0.15s;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #ff641a;
+    }
+  }
+}

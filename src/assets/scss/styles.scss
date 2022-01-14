@@ -43,6 +43,12 @@ a {
   }
 }
 
+.title-text {
+  font-size: clamp(24px, 5vw, 39px);
+  line-height: 1.18;
+  text-align: center;
+}
+
 .spinner-wrapper {
   display: flex;
   justify-content: center;

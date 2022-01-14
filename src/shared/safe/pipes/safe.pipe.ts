@@ -7,7 +7,11 @@ export class SafePipe implements PipeTransform {
 
   constructor(private sanitizer: DomSanitizer) { }
 
-  transform(url: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url.replace('watch?v=', 'embed/'));
+  transform(url: string, isReplaced?: boolean) {
+    if (isReplaced) {
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url.replace('watch?v=', 'embed/'));
+    }
+
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

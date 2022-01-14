@@ -9,6 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MainPageModule } from './main-page/main-page.module';
 import { ScrollTopModule } from './modules/scroll-top/scroll-top.module';
 import { VideoGalleryModule } from './video-gallery/video-gallery.module';
+import { ParentsAndChildsModule } from './parents-and-childs/parents-and-childs.module';
+import { UsefulLinksComponent } from './useful-links/useful-links.component';
+import { UsefulLinksModule } from './useful-links/useful-links.module';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,16 @@ import { VideoGalleryModule } from './video-gallery/video-gallery.module';
   ],
   imports: [
     CommonModule,
+    ScrollTopModule,
+    MatIconModule,
+    MatIconModule,
     PagesRoutingModule,
     HeaderModule,
     FooterModule,
-    MatIconModule,
-    MatIconModule,
     MainPageModule,
     VideoGalleryModule,
-    ScrollTopModule,
+    ParentsAndChildsModule,
+    UsefulLinksModule,
   ],
 })
 export class PagesModule { }

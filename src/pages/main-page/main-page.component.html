@@ -24,7 +24,7 @@
           <span class="spinner"></span>
         </div>
         <iframe
-          [src]="video.src | safe"
+          [src]="video.src | safe: true"
           (load)="onLoadVideo(video)"
           frameborder="0"
           allowfullscreen

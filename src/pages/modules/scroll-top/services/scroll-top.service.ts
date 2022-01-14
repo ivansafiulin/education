@@ -7,7 +7,7 @@ export class ScrollTopService {
 
   constructor() {}
 
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  scrollToTop(behavior: ScrollBehavior = 'smooth'): void {
+    window.scrollTo({ top: 0, behavior: behavior });
   }
 }

@@ -21,7 +21,7 @@
       <h4 class="title-text text-bold">Вітальне відео</h4>
       <div class="video">
         <div *ngIf="video.isLoading" class="video-spinner">
-          <mat-spinner></mat-spinner>
+          <mat-spinner class="video-mat-spinner"></mat-spinner>
         </div>
         <iframe
           [src]="video.src | safe"

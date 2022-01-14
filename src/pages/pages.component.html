@@ -1,6 +1,6 @@
 <app-header></app-header>
-  <div class="main-layout">
-    <router-outlet></router-outlet>
+  <div [@fadeInAnimation]="prepareRoute(outlet)" class="main-layout">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
 <app-footer></app-footer>
 <app-scroll-top></app-scroll-top>

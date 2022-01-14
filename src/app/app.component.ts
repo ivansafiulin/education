@@ -26,7 +26,7 @@ export class AppComponent {
     this.document.body.setAttribute('version', this.version);
 
     this.router.events.pipe(filter(r => r instanceof NavigationEnd)).subscribe(r=>{
-      this.scrollTopService.scrollToTop("auto");
+      this.scrollTopService.scrollToTop('auto');
     });
   }
 }

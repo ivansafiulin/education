@@ -20,8 +20,8 @@
     <div class="container-block container-block--last-block">
       <h4 class="title-text text-bold">Вітальне відео</h4>
       <div class="video">
-        <div *ngIf="video.isLoading" class="video-spinner">
-          <mat-spinner class="video-mat-spinner"></mat-spinner>
+        <div *ngIf="video.isLoading" class="spinner-wrapper">
+          <span class="spinner"></span>
         </div>
         <iframe
           [src]="video.src | safe"

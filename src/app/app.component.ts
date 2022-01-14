@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import { DOCUMENT } from '@angular/common';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router  } from '@angular/router';
 import { ScrollTopService } from '../pages/modules/scroll-top/services/scroll-top.service';
-import { filter } from 'rxjs/internal/operators/filter';
+import { filter } from 'rxjs/operators';
 import { fadeInAnimation } from '../animations/fade-in-animation.animation';
 
 @Component({

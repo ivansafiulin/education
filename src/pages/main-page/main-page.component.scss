@@ -10,7 +10,7 @@
 
 .title-text {
   font-size: clamp(24px, 5vw, 39px);
-  line-height: 1.4;
+  line-height: 1.18;
   text-align: center;
 }
 
@@ -19,11 +19,11 @@
 
   &__text {
     font-size: clamp(16px, 3vw, 20px);
-    line-height: 1.4;
+    line-height: 1.18;
 
     span {
       font-size: clamp(14px, 3vw, 23px);
-      line-height: 1.4;
+      line-height: 1.18;
     }
   }
 
@@ -41,7 +41,7 @@
 
   .video {
     width: 100%;
-    height: 40vw;
+    height: 60vw;
     min-height: 300px;
     max-height: 700px;
 

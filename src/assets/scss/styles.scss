@@ -36,6 +36,10 @@ a {
     margin-left: auto;
     padding: clamp(10px, 4vw, 30px) clamp(10px, 4vw, 20px);
     max-width: 1200px;
+
+    &--last-block {
+      padding-bottom: calc(clamp(10px, 4vw, 30px) + 20px);
+    }
   }
 }
 

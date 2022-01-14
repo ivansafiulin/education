@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IVideo } from '../models/interfaces/video.interface';
 import { videos } from '../../shared/data/video.data';
-import { fadeInAnimation } from '../../animations/fade-in-animation.animation';
 
 @Component({
   selector: 'app-video-gallery',
@@ -10,12 +9,13 @@ import { fadeInAnimation } from '../../animations/fade-in-animation.animation';
 })
 export class VideoGalleryComponent implements OnInit {
 
-  videos: IVideo[] = JSON.parse(JSON.stringify(videos));
+  videos: IVideo[] =  JSON.parse(JSON.stringify(videos));
 
   constructor() {
   }
 
   ngOnInit(): void {
+
   }
 
   identify(index: number, item: IVideo) {

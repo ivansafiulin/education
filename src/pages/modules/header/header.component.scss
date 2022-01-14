@@ -68,9 +68,9 @@
     &:hover {
       color: #a8cdc3;
     }
+  }
 
-    &--active {
-      color: #ff641a;
-    }
+  a.link-item.link-item--active {
+    color: #ff641a;
   }
 }

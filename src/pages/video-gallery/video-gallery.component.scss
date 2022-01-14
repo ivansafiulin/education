@@ -3,7 +3,7 @@
 
   &__title {
     font-size: clamp(24px, 5vw, 39px);
-    line-height: 1.4;
+    line-height: 1.18;
     text-align: center;
   }
 }
@@ -24,11 +24,6 @@
     height: 50vw;
     max-width: 500px;
     max-height: 300px;
-
-    @media screen and(min-width: 1200px) {
-      max-width: 350px;
-      max-height: 220px;
-    }
 
     iframe {
       width: 100%;

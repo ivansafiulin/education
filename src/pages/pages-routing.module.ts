@@ -10,7 +10,7 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       { path: '', component: MainPageComponent, data: { animation: 'main-page' } },
-      { path: '/video-gallery', component: VideoGalleryComponent, data: { animation: 'video-gallery-page' } }
+      { path: 'video-gallery', component: VideoGalleryComponent, data: { animation: 'video-gallery-page' } }
     ]
   }
 ];

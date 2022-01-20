@@ -8,12 +8,19 @@ import { IVideo } from '../models/interfaces/video.interface';
 })
 export class MainPageComponent implements OnInit {
 
-  video: IVideo = {
+  videoOne: IVideo = {
     id: 4,
     src: 'https://www.youtube.com/watch?v=do5p5ynpzF0',
     isLoading: true,
     isMain: true
   };
+
+  videoTwo: IVideo = {
+    id: 4,
+    src: 'https://www.youtube.com/watch?v=b01KTadJTBI',
+    isLoading: true,
+    isMain: false,
+  }
 
   constructor() { }
 
@@ -21,6 +28,10 @@ export class MainPageComponent implements OnInit {
 
 
   onLoadVideo(video: IVideo | undefined): void {
-    if (video) { video.isLoading = false; }
+    if (video) {
+      setTimeout(() => {
+        video.isLoading = false;
+      }, 1000);
+    }
   }
 }

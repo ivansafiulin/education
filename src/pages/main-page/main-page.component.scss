@@ -8,10 +8,8 @@
   }
 }
 
-.title-text {
-  font-size: clamp(24px, 5vw, 39px);
-  line-height: 1.18;
-  text-align: center;
+.container-wrapper:nth-of-type(2n) {
+  background-color: #fff;
 }
 
 .about-us {
@@ -31,14 +29,16 @@
     margin-bottom: clamp(15px, 4vw, 25px);
   }
 
+  p:nth-of-type(1) {
+    color: darkgreen;
+  }
+
   p:nth-last-child(1) {
     margin: 0;
   }
 }
 
 .video-presentation {
-  background-color: rgb(165, 205, 195, 0.3);
-
   .video {
     position: relative;
     width: 100%;

@@ -8,10 +8,10 @@ import { FooterModule } from './modules/footer/footer.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MainPageModule } from './main-page/main-page.module';
 import { ScrollTopModule } from './modules/scroll-top/scroll-top.module';
-import { VideoGalleryModule } from './video-gallery/video-gallery.module';
-import { ParentsAndChildsModule } from './parents-and-childs/parents-and-childs.module';
-import { UsefulLinksComponent } from './useful-links/useful-links.component';
+import { ThematicBlockModule } from './thematic-block/thematic-block.module';
+import { ForParentsModule } from './for-parents/for-parents.module';
 import { UsefulLinksModule } from './useful-links/useful-links.module';
+import { RegulationDocumentsModule } from './regulation-documents/regulation-documents.module';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,10 @@ import { UsefulLinksModule } from './useful-links/useful-links.module';
     HeaderModule,
     FooterModule,
     MainPageModule,
-    VideoGalleryModule,
-    ParentsAndChildsModule,
+    ThematicBlockModule,
+    ForParentsModule,
     UsefulLinksModule,
+    RegulationDocumentsModule,
   ],
 })
 export class PagesModule { }

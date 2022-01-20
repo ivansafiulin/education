@@ -1,12 +1,23 @@
-<div class="useful-links">
-  <div  class="container-wrapper">
+<div class="page">
+  <div class="container-wrapper">
     <div class="container-block">
       <h4 class="title-text text-bold">Корисні посилання</h4>
-      <ul class="links">
-        <li *ngFor="let link of links" class="link-element">
-          <a [href]="link.link" class="link" target="_blank">{{ link.name }}</a>
-        </li>
-      </ul>
+      <div class="group-links">
+        <p class="main-text text-bold">Рекомендуємо ресурси самостійного навчання англійської мови дітьми</p>
+        <ul class="links">
+          <li *ngFor="let link of linksResource" class="link-element">
+            <a [href]="link.link" class="link" target="_blank">{{ link.name }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="group-links">
+        <p class="main-text text-bold">Мобільні додатки</p>
+        <ul class="links">
+          <li *ngFor="let link of linksApp" class="link-element">
+            <a [href]="link.link" class="link" target="_blank">{{ link.name }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

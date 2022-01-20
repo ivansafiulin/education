@@ -1,22 +1,16 @@
-.title-text {
-  font-size: clamp(24px, 5vw, 39px);
-  line-height: 1.18;
-  text-align: center;
-}
-
 .links {
   padding: 0;
   list-style: none;
   text-align: center;
-  margin-top: clamp(10px, 4vw, 35px);
+  margin-top: clamp(10px, 4vw, 25px);
 
   .link-element:not(:nth-last-of-type(1)) {
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 2vw, 17px);
   }
 
   .link {
     display: inline-block;
-    font-size: clamp(20px, 4vw, 24px);
+    font-size: clamp(14px, 3vw, 18px);
     line-height: 1.18;
     color: #000;
     transition: color 0.15s, transform 0.15s;
@@ -28,4 +22,13 @@
       color: #ff641a;
     }
   }
+}
+
+.group-links:nth-last-of-type(1) {
+  margin-top: clamp(15px, 3vw, 25px)
+}
+
+.main-text {
+  text-align: center;
+  color: darkgreen;
 }

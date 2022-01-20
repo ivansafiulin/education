@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="container-wrapper">
+    <div class="container-block container-block--last-block">
+      <h4 class="thematic-block__title title-text text-bold">
+        Нормативні документи в галузі іншомовної освіти дітей дошкільного віку
+      </h4>
+      <ul class="links">
+        <li *ngFor="let link of links" class="link-element">
+          <a [href]="link.link" class="link" target="_blank">{{ link.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -5,27 +5,46 @@
   <div class="about-us container-wrapper">
     <div class="container-block">
       <h4 class="title-text text-bold">Про нас</h4>
-      <p class="about-us__text">
-        <span class="text-bold">EEFK (Easy english for kids)</span>
-        - це найкращий веб-сайт з підборкою відеоматеріалів для дітей, батьків та педагогів.
-        Саме тут ви знайдете найцікавіші та найефективніші інтерактивні ігри та відео для вивчення англійської мови.
+      <p class="about-us__text text-bold">
+        Пропонуємо вчити англійську з нами!
       </p>
       <p class="about-us__text">
-        Місія EEFK полягає в тому, щоб допомогти легко та цікаво опанувати іншомовну лексичну компетенцію на ранньому
-        етапі вивчення англійської мови.
+        Вітаємо всіх, хто завітав на наш освітній ресурс!
+        Хочемо допомогти опановувати англійську мови сучасними методами.
+      </p>
+      <p class="about-us__text">
+        <span class="text-bold">Мета</span> нашого освітнього ресурсу: створення інформативної скриньки з
+        різноманітними іграми, відео, фото, порадами, цифровыми ресурсами та іншою корисною інформацією, яка допоможе
+        правильно та легко оволодіти англійською мовою дітьми дошкільного віку.
       </p>
     </div>
   </div>
   <div class="video-presentation container-wrapper">
-    <div class="container-block container-block--last-block">
+    <div class="container-block">
       <h4 class="title-text text-bold">Вітальне відео</h4>
       <div class="video">
-        <div *ngIf="video.isLoading" class="spinner-wrapper">
+        <div *ngIf="videoOne.isLoading" class="spinner-wrapper">
           <span class="spinner"></span>
         </div>
         <iframe
-          [src]="video.src | safe: true"
-          (load)="onLoadVideo(video)"
+          [src]="videoOne.src | safe: true"
+          (load)="onLoadVideo(videoOne)"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="video-presentation container-wrapper">
+    <div class="container-block container-block--last-block">
+      <h4 class="title-text text-bold">Як користуватись LearningApps?</h4>
+      <div class="video">
+        <div *ngIf="videoTwo.isLoading" class="spinner-wrapper">
+          <span class="spinner"></span>
+        </div>
+        <iframe
+          [src]="videoTwo.src | safe: true"
+          (load)="onLoadVideo(videoTwo)"
           frameborder="0"
           allowfullscreen
         ></iframe>

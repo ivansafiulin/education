@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ParentsAndChildsComponent } from './parents-and-childs.component';
+import { ThematicBlockComponent } from './thematic-block.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SafeModule } from '../../shared/safe/safe.module';
-
 
 @NgModule({
   declarations: [
-    ParentsAndChildsComponent,
+    ThematicBlockComponent,
   ],
   imports: [
     CommonModule,
+    MatProgressSpinnerModule,
     SafeModule,
   ],
 })
-export class ParentsAndChildsModule {
+export class ThematicBlockModule {
 }

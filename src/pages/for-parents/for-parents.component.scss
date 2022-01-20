@@ -1,0 +1,25 @@
+//.container-wrapper:nth-of-type(2n + 1) {
+//  background-color: #fff;
+//}
+
+.parent-message {
+  color: #323232;
+
+  &__text {
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.18;
+
+    span {
+      font-size: clamp(14px, 3vw, 23px);
+      line-height: 1.18;
+    }
+  }
+
+  p {
+    margin-bottom: clamp(15px, 4vw, 25px);
+  }
+
+  p:nth-last-child(1) {
+    margin: 0;
+  }
+}

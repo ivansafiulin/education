@@ -44,9 +44,16 @@ a {
 }
 
 .title-text {
-  font-size: clamp(24px, 5vw, 39px);
-  line-height: 1.18;
+  font-size: clamp(24px, 5vw, 39px) !important;
+  line-height: 1.18 !important;
   text-align: center;
+  margin-bottom: clamp(15px, 3vw, 25px) !important;
+}
+
+.main-text {
+  font-size: clamp(16px, 3vw, 20px);
+  line-height: 1.18;
+  margin-bottom: clamp(15px, 4vw, 25px);
 }
 
 .spinner-wrapper {

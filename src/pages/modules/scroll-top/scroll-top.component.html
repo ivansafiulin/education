@@ -1,5 +1,5 @@
-<div (click)="scrollTop()" class="scroll-top">
-  <button class="btn-default scroll-top__btn" [ngClass]="{'visible-btn': isVisibleScrollBtn }">
+<div *ngIf="isVisibleScrollBtn" (click)="scrollTop()" class="scroll-top">
+  <button class="btn-default scroll-top__btn">
     <mat-icon>arrow_upward</mat-icon>
   </button>
 </div>

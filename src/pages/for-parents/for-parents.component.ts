@@ -8,7 +8,7 @@ import { IVideo } from '../models/interfaces/video.interface';
 })
 export class ForParentsComponent implements OnInit {
 
-  video: IVideo = { id: 5, src: 'https://www.youtube.com/watch?v=5UYmXf8wAJI', isLoading: false }
+  video: IVideo = { id: 5, src: 'https://www.youtube.com/watch?v=5UYmXf8wAJI', isLoading: true }
 
   constructor() {}
 

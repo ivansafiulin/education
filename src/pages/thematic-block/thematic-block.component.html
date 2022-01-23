@@ -1,39 +1,139 @@
 <div class="page">
-  <div class="videos container-wrapper">
-    <div class="container-block">
-      <h4 class="thematic-block__title title-text text-bold">Відео галерея</h4>
-      <div class="videos-wrapper">
-        <div *ngFor="let video of videos; index as i; trackBy:identify" class="video">
-          <div *ngIf="video.isLoading" class="spinner-wrapper">
-            <span class="spinner"></span>
+  <div class="container-wrapper">
+    <div class="container-block fruits-block">
+      <h4 class="title-text text-bold">Fruits / Фрукти</h4>
+      <p class="main-text text-center">Ознайомтесь з лексичним матеріалом у відео наданому нижче</p>
+      <div class="video">
+        <div *ngIf="videos[2].isLoading" class="spinner-wrapper">
+          <span class="spinner"></span>
+        </div>
+        <iframe
+          [src]="videos[2].src | safe: true"
+          (load)="onLoadResource(videos[2])"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="pronounce_together">
+        <p class="main-text"><span>Промовляймо разом:</span> дивись вправи за посиланнями наданими нижче</p>
+        <ul class="links">
+          <li class="link-element">
+            <a class="link" href="https://quizlet.com/_axozkr?x=1qqt&i=3lzr6w" target="_blank">quizlet</a>
+          </li>
+          <li class="link-element">
+            <a class="link" href="https://vocaroo.com/1aDajYYB37fX" target="_blank">vocaroo</a>
+          </li>
+        </ul>
+      </div>
+      <div class="interactive-games">
+        <p class="interactive-games__text main-text text-bold">
+          Пройдіть інтерактивні вправи на платформі LearningApps
+        </p>
+        <div class="resources">
+          <div class="resource">
+            <div *ngIf="resources[0].isLoading" class="spinner-wrapper">
+              <span class="spinner"></span>
+            </div>
+            <iframe
+              [src]="resources[0].src | safe"
+              (load)="onLoadResource(resources[0])"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
           </div>
-          <iframe
-            [src]="video.src | safe: true"
-            (load)="onLoadVideo(video)"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+          <div class="resource">
+            <div *ngIf="resources[2].isLoading" class="spinner-wrapper">
+              <span class="spinner"></span>
+            </div>
+            <iframe
+              [src]="resources[2].src | safe"
+              (load)="onLoadResource(resources[2])"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="link-resource-block text-center">
+          <a
+            class="link link-resource"
+            href="https://learnenglishkids.britishcouncil.org/category/topics/fruit-and-vegetables"
+            target="_blank"
+            matTooltip="Оригінальні матеріали розміщено за даним посиланням"
+            matTooltipPosition="above"
+            matTooltipClass="link-tooltip"
+          >
+            Fruits з  LearnEnglish Kids
+          </a>
         </div>
       </div>
     </div>
   </div>
-  <div
-    *ngFor="let resource of resources;trackBy:identify; let last"
-    class="container-wrapper"
-    [class.container-block--last-block]="last"
-  >
-    <div class="container-block">
-      <h4 class="title-text text-bold">{{ resource.title }}</h4>
-      <div class="resource">
-        <div *ngIf="resource.isLoading" class="spinner-wrapper">
+  <div class="container-wrapper">
+    <div class="container-block parts-body-block">
+      <h4 class="title-text text-bold">Parts of body / Частини тіла</h4>
+      <p class="main-text text-center">Ознайомтесь з лексичним матеріалом у відео наданому нижче</p>
+      <div class="video">
+        <div *ngIf="videos[0].isLoading" class="spinner-wrapper">
           <span class="spinner"></span>
         </div>
         <iframe
-          [src]="resource.src | safe"
-          (load)="onLoadResource(resource)"
+          [src]="videos[0].src | safe: true"
+          (load)="onLoadResource(videos[0])"
           frameborder="0"
           allowfullscreen
         ></iframe>
+      </div>
+      <div class="pronounce_together">
+        <p class="main-text"><span>Промовляймо разом:</span> дивись вправи за посиланнями наданими нижче</p>
+        <ul class="links">
+          <li class="link-element">
+            <a class="link" href="https://quizlet.com/661260650/parts-of-body-flash-cards/" target="_blank">quizlet</a>
+          </li>
+          <li class="link-element">
+            <a class="link" href="https://voca.ro/1dAK1jTQuYKL" target="_blank">vocaroo</a>
+          </li>
+        </ul>
+      </div>
+      <div class="interactive-games">
+        <p class="interactive-games__text main-text text-bold">
+          Пройдіть інтерактивні вправи на платформі LearningApps
+        </p>
+        <div class="resources">
+          <div class="resource">
+            <div *ngIf="resources[1].isLoading" class="spinner-wrapper">
+              <span class="spinner"></span>
+            </div>
+            <iframe
+              [src]="resources[1].src | safe"
+              (load)="onLoadResource(resources[1])"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="resource">
+            <div *ngIf="resources[3].isLoading" class="spinner-wrapper">
+              <span class="spinner"></span>
+            </div>
+            <iframe
+              [src]="resources[3].src | safe"
+              (load)="onLoadResource(resources[3])"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="link-resource-block text-center">
+          <a
+            class="link link-resource"
+            href="https://learnenglishkids.britishcouncil.org/category/topics/fruit-and-vegetables"
+            target="_blank"
+            matTooltip="Оригінальні матеріали розміщено за даним посиланням"
+            matTooltipPosition="above"
+            matTooltipClass="link-tooltip"
+          >
+            Fruits з  LearnEnglish Kids
+          </a>
+        </div>
       </div>
     </div>
   </div>

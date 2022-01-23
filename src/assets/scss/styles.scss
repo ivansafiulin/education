@@ -11,6 +11,11 @@ button {
   cursor: pointer;
 }
 
+.link-tooltip {
+  font-size: clamp(11px, 2vw, 14px);
+  text-align: center;
+}
+
 .btn-default {
   display: block;
   height: max-content;
@@ -54,6 +59,10 @@ a {
   font-size: clamp(16px, 3vw, 20px);
   line-height: 1.18;
   margin-bottom: clamp(15px, 4vw, 25px);
+}
+
+.text-center {
+  text-align: center;
 }
 
 .spinner-wrapper {

@@ -15,6 +15,17 @@
       <p class="parent-message__text">
         Перегляньте відео з порадами, які допоможуть вам вивчати англійську мову разом з вашими дітьми. Приємного перегляду!
       </p>
+      <div class="video">
+        <div *ngIf="video.isLoading" class="spinner-wrapper">
+          <span class="spinner"></span>
+        </div>
+        <iframe
+          [src]="video.src | safe: true"
+          (load)="onLoadVideo(video)"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </div>

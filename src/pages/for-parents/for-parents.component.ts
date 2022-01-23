@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IResource } from '../models/interfaces/resource.interface';
-import { resources } from '../../shared/data/resources.data';
+import { IVideo } from '../models/interfaces/video.interface';
 
 @Component({
   selector: 'app-for-parents',
@@ -9,9 +8,18 @@ import { resources } from '../../shared/data/resources.data';
 })
 export class ForParentsComponent implements OnInit {
 
+  video: IVideo = { id: 5, src: 'https://www.youtube.com/watch?v=5UYmXf8wAJI', isLoading: false }
+
   constructor() {}
 
   ngOnInit(): void {
   }
 
+  onLoadVideo(resource: IVideo): void {
+    if (resource) {
+      setTimeout(() => {
+        resource.isLoading = false;
+      }, 1000);
+    }
+  }
 }

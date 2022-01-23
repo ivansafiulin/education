@@ -1,37 +1,141 @@
+@mixin link {
+  display: inline-block;
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.18;
+  color: #000;
+  transition: color 0.15s, transform 0.15s;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    transform: scale(1.1);
+    color: #ff641a;
+  }
+}
+
+.links {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: clamp(10px, 4vw, 25px);
+
+  .link-element:not(:nth-last-of-type(1)) {
+    margin-bottom: clamp(10px, 2vw, 15px);
+  }
+
+  .link {
+    @include link;
+  }
+}
+
 .container-wrapper:nth-of-type(2n) {
   background-color: #fff;
 }
 
-.videos-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+.fruits-block,
+.parts-body-block {
+  h4 + p.main-text {
+    color: darkgreen;
+    font-weight: bold;
+  }
 
   .video {
     position: relative;
     width: 100%;
-    height: 50vw;
-    max-width: 500px;
-    max-height: 300px;
+    height: 60vw;
+    margin: 25px auto 0;
 
-    iframe {
+    @media screen and (min-width: 920px) {
+      width: 75vw;
+      height: 45vw;
+      max-width: 750px;
+      max-height: 450px;
+    }
+  }
+
+  .pronounce_together {
+    margin-top: 25px;
+    text-align: center;
+    padding: 15px;
+    border: 5px solid darkred;
+    box-shadow: 0 0 8px 0 rgb(34, 60, 80, 0.22);
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+
+    p {
+      font-weight: bold;
+
+      span {
+        color: #ff641a;
+      }
+    }
+
+    .links {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .link {
+        animation: pulse 1s infinite;
+
+        &:hover {
+          animation: none;
+        }
+      }
+    }
+  }
+
+  .interactive-games {
+    margin-top: 20px;
+
+    &__text {
+      text-align: center;
+      color: darkgreen;
+    }
+
+    .resource {
+      position: relative;
       width: 100%;
-      height: 100%;
+      height: 60vw;
+      margin-top: 25px;
+      max-height: 600px;
+
+      &:nth-last-of-type(1) {
+        margin-top: 35px;
+      }
+    }
+
+    .link-resource-block {
+      margin-top: clamp(10px, 4vw, 30px);
+    }
+
+    .link-resource {
+      @include link;
+      color: #ff641a;
+      animation: pulse 1s infinite;
+
+      &:hover {
+        animation: none;
+      }
     }
   }
 }
 
-.resource {
-  position: relative;
-  width: 100%;
-  height: 75vw;
-  min-height: 300px;
-  max-height: 700px;
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
 
-  iframe {
-    width: 100%;
-    height: 100%;
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0.95);
   }
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+}

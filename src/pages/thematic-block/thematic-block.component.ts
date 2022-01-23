@@ -21,13 +21,11 @@ export class ThematicBlockComponent implements OnInit {
 
   }
 
-  onLoadResource(resource: IResource): void { if (resource) { resource.isLoading = false; } }
-
-  identify(index: number, item: IVideo | IResource) { return item.id; }
-
-    onLoadVideo(video: IVideo): void {
-      if (video) {
-        video.isLoading = false;
-      }
+  onLoadResource(resource: IResource | IVideo): void {
+    if (resource) {
+      setTimeout(() => {
+        resource.isLoading = false;
+      }, 1000);
     }
+  }
 }
